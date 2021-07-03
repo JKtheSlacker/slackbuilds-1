@@ -1,0 +1,11 @@
+--- a/src/hamlib-utils.c	2021-07-02 21:08:21.075877335 -0500
++++ b/src/hamlib-utils.c	2021-07-02 21:09:00.298070796 -0500
+@@ -168,7 +168,7 @@
+ 			update_statusbar (temp);
+ 		}
+ 	}
+-	strncpy (myrig->state.rigport.pathname, device, FILPATHLEN);
++	strncpy (myrig->state.rigport.pathname, device, HAMLIB_FILPATHLEN);
+ 	retcode = rig_open (myrig);
+ 	if (retcode != RIG_OK)
+ 	{
